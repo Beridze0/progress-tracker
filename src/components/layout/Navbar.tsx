@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-between border-b border-dotted px-4 py-2">
       <div className="flex items-center gap-3">
         <div>
           <NavLink to='/' className="text-2xl font-semibold cursor-pointer">PROGRESS TRACKER</NavLink>
@@ -16,26 +16,30 @@ const Navbar = () => {
             Dashboard
           </NavLink>
           <NavLink
-            to=""
+            to="/progress"
             className="hover:text-primary transition-all duration-200 text-sm"
           >
-            Dashboard
+            Progress
           </NavLink>
           <NavLink
-            to=""
+            to="/quests"
             className="hover:text-primary transition-all duration-200 text-sm"
           >
-            Dashboard
+            Quests
           </NavLink>
         </div>
       </div>
-      <div className="flex items-center gap-1">
-        <p>Davit Beridze</p>
-        <div className="flex items-center gap-0.5">
-          <div className="border border-border p-1.5 rounded-full items-center justify-center">
-          <GiSergeant />
+      <div className="flex items-center gap-2.5">
+        <div className="flex flex-col justify-center items-center">
+            <p className="text-sm font-semibold">Davit Beridze</p>
+            <p className="text-[0.65rem]">(Recruit Maggot)</p>
+        </div>
+
+        <div className="flex items-center gap-1">
+          <div className="flex border border-border p-2 rounded-full items-center justify-center">
+          <GiSergeant size={15} />
+          <p className="text-xs">Level 1</p>
           </div> 
-          <p className="text-sm">(Recruit Maggot)</p>
         </div>
       </div>
     </div>
