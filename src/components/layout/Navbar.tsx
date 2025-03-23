@@ -10,12 +10,6 @@ const Navbar = () => {
         </div>
         <div className="flex items-center gap-2 text-muted-foreground">
           <NavLink
-            to="/dashboard"
-            className="hover:text-primary transition-all duration-200 text-sm"
-          >
-            Dashboard
-          </NavLink>
-          <NavLink
             to="/progress"
             className="hover:text-primary transition-all duration-200 text-sm"
           >
