@@ -1,4 +1,4 @@
-import { gainXP, resetXP } from "@/redux/levelSlice";
+import { gainXP } from "@/redux/levelSlice";
 import { useDispatch } from "react-redux";
 
 export const dailyQuests = [
