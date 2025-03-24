@@ -1,7 +1,12 @@
+import { RootState } from "@/redux/store";
 import { GiSergeant } from "react-icons/gi";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+
+  const {level} = useSelector((state: RootState) => state.level)
+
   return (
     <div className="flex items-center justify-between border-b border-dotted px-4 py-3">
       <div className="flex items-center gap-3">
@@ -32,7 +37,7 @@ const Navbar = () => {
         <div className="flex items-center gap-1">
           <div className="flex border border-border p-2 rounded-full items-center justify-center">
           <GiSergeant size={15} />
-          <p className="text-xs">Level 1</p>
+          <p className="text-xs">Level {level}</p>
           </div> 
         </div>
       </div>
